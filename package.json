@@ -1,0 +1,21 @@
+{
+  "name": "julia_tests",
+  "version": "1.0.0",
+  "description": "This is a set of tests to learn to test in cucamber",
+  "main": "./node_modules/.bin/cucumber-js",
+  "dependencies": {
+    "chromedriver": "^2.25.1",
+    "cucumber": "^1.3.1",
+    "geckodriver": "^1.2.0",
+    "selenium-webdriver": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cucamber",
+    "tests"
+  ],
+  "author": "Julia Volvovsky",
+  "license": "MIT"
+}
