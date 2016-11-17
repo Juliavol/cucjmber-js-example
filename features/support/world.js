@@ -13,6 +13,7 @@ var driver = new webdriver.Builder()
     .build();
 
 function CustomWorld() {
+  driver.manage().timeouts().implicitlyWait(30000);
   // this.driver = new chrome.Driver()
   this.driver = driver
 }
