@@ -4,8 +4,9 @@ Feature: Example feature
   and have documentation on Cucumber training
   
   So that I can concentrate on building awesome applications
-
+  
+  @debug-dialog
   Scenario: Reading documentation
     Given I am on the Cucumber.js training page
-    I should see "Learn BDD and Cucumber from the world's leading experts"
-    Then I should click on "Download BDD Kickstart white paper"
+    When I click on "Download BDD Kickstart white paper"
+    Then I should recive a file called "bdd-kickstart.pdf"
