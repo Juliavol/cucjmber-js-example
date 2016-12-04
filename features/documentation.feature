@@ -1,12 +1,11 @@
 Feature: Example feature
-  given I am on the Cucumber.js training page
-  I want to make sure I can go to the cucumber website 
-  and have documentation on Cucumber training
+  given I am on videmob DevEnv5 on vmvast page 
+  then page should return XML
+  I want to verify the response is an empty VAST XML
   
   So that I can concentrate on building awesome applications
   
   @debug-dialog
-  Scenario: Reading documentation
-    Given I am on the Cucumber.js training page
-    When I click on "Download BDD Kickstart white paper"
-    Then I should recive a file called "bdd-kickstart.pdf"
+  Scenario: sending VAST request
+    Given I am on videmob DevEnv5 on vmvast page 
+    Then I should see "<VAST version="2.0"/>"

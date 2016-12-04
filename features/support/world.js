@@ -12,7 +12,7 @@ var driver = new webdriver.Builder()
     // .setFirefoxOptions(/* ... */)
     .build();
 
-function CustomWorld() {
+function CustomWorld(params) {
   driver.manage().timeouts().implicitlyWait(30000);
   // this.driver = new chrome.Driver()
   this.driver = driver
