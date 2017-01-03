@@ -9,8 +9,8 @@ Feature: Admin Dashboard
   @debug-dialog
   Scenario: test admin login
     Given I am on videmob DevEnv5 login page
-    When I insert wrong email into text field id="uemail"
-    When I insert wrong password into text field name="upw"
+    When I set wrong email into input field id="uemail"
+    When I set wrong password into input field id="upw"
     When I click on "Sign me in"
     Then I see "Your username or password is incorrect."
   

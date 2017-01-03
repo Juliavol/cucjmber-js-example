@@ -13,13 +13,15 @@ module.exports = function () {
   return this.driver.wait(condition, 8000);
 });
 // set wrong email in field
- this.When(/^I insert wrong email into text field(.*)"$/, function (text) {
-   this.driver.findElement({id: 'uemail'}).setText('Samion@cydersoft.com'); 
+ this.When(/^I set wrong email into input field(.*)"$/, function (text) {
+   var wEmail = "Samion@cydersoft.com"
+   this.driver.findElement({id: 'uemail'}).sendKeys("Samion@cydersoft.com");
   });
 	
 // set wrong password in field
- this.When(/^I insert wrong password into text field(.*)"$/, function (text) {
-   this.driver.findElement({id: 'upw'}).setText('12345'); 
+ this.When(/^I set wrong password into input field(.*)"$/, function (text) {
+   // var wPassword = "123455"
+   this.driver.findElement({id: 'upw'}).sendKeys(123455);
   });
 
 // i click on sign me in
