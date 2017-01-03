@@ -9,9 +9,8 @@ Feature: Admin Dashboard
   @debug-dialog
   Scenario: test admin login
     Given I am on videmob DevEnv5 login page
-    When I see "Admin Panel"
-    Then I insert wrong email into text field id="uemail"
-    then I insert wrong password into text field name="upw"
+    When I insert wrong email into text field id="uemail"
+    When I insert wrong password into text field name="upw"
     When I click on "Sign me in"
-    Then I am on http://adserverjsonapi5.dimsem.com/admin/dashboard 
-    Then I see "Dashboard"
+    Then I see "Your username or password is incorrect."
+  
