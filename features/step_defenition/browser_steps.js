@@ -6,10 +6,10 @@ module.exports = function () {
     return this.driver.get('http://adserverjsonapi5.dimsem.com/user_login/admin');
   });
 
-// when I see "text"
+// Then I see "text"
   this.Then(/^I see "([^"]*)"$/, function (text) {
   var xpath = "//*[contains(text(),'" + text + "')]";
-  var condition = seleniumWebdriver.until.elementLocated({Text: text});
+  var condition = seleniumWebdriver.until.elementLocated({id: 'error_msg'});
   return this.driver.wait(condition, 8000);
 });
 // set wrong email in field
@@ -25,8 +25,8 @@ module.exports = function () {
   });
 
 // i click on sign me in
-  this.Then(/^I click on "([^"]*)"$/, function (text, callback) {
-    return this.driver.findElement({Text: text}).then(function(element) {
+  this.When(/^I click on text="([^"]*)"$/, function (text) {
+    return this.driver.findElement({id: 'login'}).then(function(element) {
       return element.click();
     });
   });
