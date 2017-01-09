@@ -33,4 +33,4 @@ Scenario: successful admin login
     When I set correct email into input field id="uemail"
     When I set correct password into input field id="upw"
     When I click on text="Sign me in"
-    Then I am on logged into Admin Dashboard
+    Then I am logged on to Admin Dashboard

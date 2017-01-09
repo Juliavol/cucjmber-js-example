@@ -1,8 +1,11 @@
+module.exports = function () {
+
 var seleniumWebdriver = require('selenium-webdriver');
 chrome = require('selenium-webdriver/chrome')
 
-module.exports = function () {
 
+
+var url = require ('url');
 // i am on login admin  page  
   this.Given(/^I am on videmob DevEnv5 login page$/, function() {
     return this.driver.get('http://adserverjsonapi5.dimsem.com/user_login/admin');
@@ -44,7 +47,7 @@ module.exports = function () {
 });
 
 //Then I am on logged into Admin Dashboard
-this.Given(/^I am on logged into Admin Dashboard$/, function() {
+this.Given(/^I am logged on to Admin Dashboard$/, function() {
     return this.driver.get('http://adserverjsonapi5.dimsem.com/admin/dashboard');
   });
 };
