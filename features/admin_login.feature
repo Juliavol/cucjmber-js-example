@@ -8,29 +8,29 @@ Feature: Admin Dashboard
   
   @debug-dialog
 Scenario: 1st Failed admin login
-    Given I am on videmob DevEnv5 login page
-    When I set wrong email into input field id="uemail"
-    When I set wrong password into input field id="upw"
+    Given I am on "http://adserverjsonapi5.dimsem.com/user_login/admin" page
+    When I set "samion@cydersoft.com" into input field "uemail"
+    When I set "111111" into input field "upw"
     When I click on text="Sign me in"
     Then I get an error "Your username or password is incorrect."
   
 Scenario: 2nd Failed admin login
-    Given I am on videmob DevEnv5 login page
-    When I set wrong email into input field id="uemail"
-    When I set correct password into input field id="upw"
+    Given I am on "http://adserverjsonapi5.dimsem.com/user_login/admin" page
+    When I set "samion@cydersoft.com" into input field "uemail"
+    When I set "123456" into input field "upw"
     When I click on text="Sign me in"
     Then I get an error "Your username or password is incorrect."
 
 Scenario: 3rd Failed admin login
-    Given I am on videmob DevEnv5 login page
-    When I set correct email into input field id="uemail"
-    When I set wrong password into input field id="upw"
+    Given I am on "http://adserverjsonapi5.dimsem.com/user_login/admin" page
+    When I set "semion@cydersoft.com" into input field "uemail"
+    When I set "122222" into input field "upw"
     When I click on text="Sign me in"
     Then I get an error "Your username or password is incorrect."
 
 Scenario: successful admin login
-    Given I am on videmob DevEnv5 login page
-    When I set correct email into input field id="uemail"
-    When I set correct password into input field id="upw"
+    Given I am on "http://adserverjsonapi5.dimsem.com/user_login/admin" page
+    When I set "semion@cydersoft.com" into input field "uemail"
+    When I set "123456" into input field "upw"
     When I click on text="Sign me in"
-    Then I am logged on to Admin Dashboard
+    Then I am logged on to "Dashboard"
